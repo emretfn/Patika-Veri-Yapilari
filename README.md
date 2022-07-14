@@ -67,3 +67,89 @@ Patika.dev üzerinde veri yapıları ve algoritmalar modülünün son ödevi.
 ```
 * Big-O gösterimini yazınız.
   * 3 durum içinde Big-o gösterimi O(nlogn) olur 
+
+# Binary Search Tree Ödevi
+
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb
+
+# Çözümler
+
+Binary search tree için dizinin ilk elemanından başlarız ve root olarak belirleriz. Daha sonrasında gelen sayı küçükse sola büyükse sağa eklenir. Daha sonraki sayılar için ise sürekli olarak diğer sayılarla karşılaştırarak ilerlenir. Karşılaştırıldığı sayıdan küçükse soluna, büyükse sağına gider.
+
+* Adımları:
+
+```
+ 7
+
+   7
+  /
+ 5
+
+     7
+    /
+   5
+  /
+ 1 
+
+     7
+    / \
+   5   8
+  /
+ 1 
+
+     7
+    / \
+   5   8
+  / 
+ 1  
+  \
+   3
+
+     7
+    / \
+   5   8
+  / \
+ 1   6
+  \
+   3
+
+       7
+      / \
+     5   8
+    / \
+   1   6
+  / \
+ 0   3
+
+       7
+      / \
+     5   8
+    / \   \
+   1   6   9
+  / \
+ 0   3
+
+       7
+      / \
+     5   8
+    / \   \
+   1   6   9
+  / \
+ 0   3
+      \
+       4
+ 
+ 
+       7
+      / \
+     5   8
+    / \   \
+   1   6   9
+  / \
+ 0   3
+    / \
+   2   4
+ 
+```
