@@ -23,11 +23,11 @@ Patika.dev üzerinde veri yapıları ve algoritmalar modülünün son ödevi.
  [2,6,16,18,22,27]
 ```
 * Big-o gösterimleri:
-```
-Average Case: O(n^2)
-Worst Case: O(n^2)
-Best Case: O(n)
-```
+
+  * Average Case: O(n^2)
+  * Worst Case: O(n^2)
+  * Best Case: O(n)
+
 * Time Complexity
   * Average case: Birden fazla cevap mevcut. Dizinin hemen hemen sıralanmış olması diyebiliriz.
   * Worst case: Dizinin büyükten küçüğe sıralanmış hali. 
@@ -41,3 +41,29 @@ Best Case: O(n)
  [3,5,7|,8,2,9,4,15,6]
  [3,5,7,8|,2,9,4,15,6]
 ```
+
+# Merge Sort Ödevi
+[16,21,11,8,12,22] -> Merge Sort
+
+* Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+* Big-O gösterimini yazınız.
+
+# Çözümler
+* Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+```
+ 
+ [16,21,11,8,12,22] ilk önce diziyi ikiye böleriz
+ * [16,21,11]     [8,12,22]
+ Daha küçük parçalar etmek için 2 ye bölmeye devam ediyoruz.
+ * [16]   [21, 11]   [8]   [12,22]
+ Dizi bölünemeyecek hale geldiği için her birini kendi içinde sıralamaya başlarız.
+ * [16]   [11,21]   [8,12]   [22]
+ Birleştirme işlemine başlıycaz fakat birleştirirken sıralamaya devam ederiz.
+ * [11,16,21]   [8,12,22]
+ Tekrar birleştireceğiz ve sıralamaya devam ediyoruz.
+ * [8,11,12,16,21,22]
+ Sıralı dizimizi elde ettik.
+ 
+```
+* Big-O gösterimini yazınız.
+  * 3 durum içinde Big-o gösterimi O(nlogn) olur 
